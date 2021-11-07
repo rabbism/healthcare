@@ -1,6 +1,5 @@
 import React from 'react';
 import logo  from '../../images/Breting.png'
-import doctor from '../../'
 
 const Doctor = () => {
     return (

@@ -1,21 +1,19 @@
 import React, { useEffect, useState } from 'react';
 import UserService from '../UserSevice/UserService';
-import Extra from './../Extra/Extra';
 import breating from '../../images/Breting.png'
 
-const Service = () => {
+const EndBanner = () => {
     const [user ,setUser] =useState([]);
 
 
     useEffect(() =>{
-        fetch('./fakeservice.json')
+        fetch('./fakeHomeData.json')
         .then( res => res.json())
         .then(data => setUser(data))
     },[])
     return (
        <div>
            <div className='mt-5 mb-5'>
-               <Extra></Extra>
            </div>
            <div className='text-center'>
                <h2 className='fw-bold'>We Offer Different <span className='text-primary'>Services</span> To Improve Your Health</h2>
@@ -37,4 +35,4 @@ const Service = () => {
     );
 };
 
-export default Service;
+export default EndBanner;

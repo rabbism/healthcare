@@ -5,11 +5,16 @@ import Home from './componnt/Home/Home';
 import Service from './componnt/Service/Service';
 import About from './componnt/About/About';
 import NotFound from './componnt/NotFound/NotFound';
+import Footer from './componnt/Footer/Footer';
+import Login from './componnt/Login/Login';
+import AuthProvider from './componnt/Context/AuthProvider';
+import PrivetRouter from './componnt/PrivetRouter/PrivetRouter';
 
 function App() {
   return (
-  <div>
-      <Router>
+  
+    <AuthProvider>
+       <Router>
         <Header></Header>
       <Switch>
         <Route exact path='/'>
@@ -18,18 +23,27 @@ function App() {
         <Route path='/home'>
           <Home></Home>
         </Route>
-        <Route path='/service'>
+        <Route path='/login'>
+            <Login></Login>
+        </Route>
+        <PrivetRouter path='/service'>
           <Service></Service>
-        </Route>
-        <Route path='/about'>
+        </PrivetRouter>
+        <PrivetRouter path='/about'>
           <About></About>
-        </Route>
+        </PrivetRouter>
         <Route path='*'>
           <NotFound></NotFound>
         </Route>
       </Switch>
+      <Footer></Footer>
     </Router>
-    </div>
+    </AuthProvider>
+   
+
+    
+      
+  
   );
 }
 

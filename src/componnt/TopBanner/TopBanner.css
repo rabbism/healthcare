@@ -1,5 +1,9 @@
 .top-banner{
-    background-image: url('https://i.ibb.co/MZgS7QJ/Cute-girl-and-her-mother-looking-at-the-doctor-in-hospital.jpg');
+    background-image: url('../../images/TopBanner.jpg');
     background-size: cover;
-    color: black;
+    color: white;
 }
+@media only screen and (max-width :576px) {
+    .top-banner{
+      width: 50%;
+    }}
