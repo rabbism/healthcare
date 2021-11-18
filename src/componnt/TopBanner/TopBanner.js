@@ -3,7 +3,8 @@ import './TopBanner.css'
 
 const TopBanner = () => {
     return (
-        <div className='top-banner p-5'>
+      <div className='top-style'>
+            <div className='top-banner p-5'>
             <div className='m-5 w-50'>
             <h4>BEST CONSULTANTS</h4>
             <h1>Best Doctors and</h1>
@@ -15,6 +16,7 @@ const TopBanner = () => {
             <button className='btn btn-primary'>Learn More</button>
             </div>
         </div>
+      </div>
     );
 };
 

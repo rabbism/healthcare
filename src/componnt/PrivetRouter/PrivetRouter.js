@@ -3,12 +3,14 @@ import { Redirect, Route } from 'react-router-dom';
 import useAuth from '../Hooks/useAuth';
 
 const PrivetRouter = ({ children, ...rest }) => {
-    const {user} =useAuth()
+    const {user,loading} =useAuth()
+    console.log(user)
+    if (loading) return 'loading';
     return (
         
             <Route
             {...rest}
-                render={({ location }) =>user.email ? children
+                render={({ location }) =>user.email || user.displayName ? children
                 :
                 <Redirect 
                 to={{

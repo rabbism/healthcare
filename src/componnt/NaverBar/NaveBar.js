@@ -26,13 +26,13 @@ const NaveBar = () => {
           <Link to='/about' className="nav-link">About</Link>
         </li>
         <li className="nav-item ">
-          {user.email ? <button onClick={logOut} className='btn btn-primary mt-1'>Log Out</button>
+          {user.email || user.displayName ? <button onClick={logOut} className='btn btn-primary mt-1'>Log Out</button>
           :<Link to='/login' className="nav-link active text-white" aria-current="page" >Sign Up</Link>
           }
           
         </li>
         <li className="nav-item ">
-          {user.email && <Link className="nav-link">Hello {user.displayName}</Link>}
+          {user.email || user.displayName && <Link className="nav-link">Hello {user.displayName}</Link>}
         </li>
     
       </ul>

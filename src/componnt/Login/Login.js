@@ -10,6 +10,7 @@ const Login = () => {
   const handelClick =() =>{
     googleInUsingSignIn()
         .then(result=> {
+          console.log(result)
            history.push(redirect_uri);
       // const user = result.user;
       // console.log(user);
